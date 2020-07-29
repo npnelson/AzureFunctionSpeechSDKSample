@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "SpeechSDKFunctionNotWorking": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 30458,
+      "useSSL": false
+    }
+  }
+}
