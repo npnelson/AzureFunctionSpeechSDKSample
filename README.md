@@ -54,3 +54,5 @@ Executing 'TestSpeech' (Reason='This function was programmatically called via th
 Perhaps these ".so" files should be copied to the bin directory alongside Microsoft.CognitiveServices.Speech.csharp.dll?
 
 Also included is an ASP.NET Web Application (SpeechSDKWebApplication) that runs fine in Visual Studio with docker/release mode. In that sample, all you have to do is launch the app and hit it with a browser and you can see how it recognizes the speech properly.
+
+![alt text](https://github.com/npnelson/AzureFunctionSpeechSDKSample/blob/master/AzureFunctionSpeechSDK.jpg?raw=true)
