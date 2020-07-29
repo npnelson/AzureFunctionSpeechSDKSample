@@ -12,7 +12,6 @@ namespace SpeechSDKCommon
         {
             var sb = new StringBuilder();
             var config = SpeechConfig.FromSubscription("405941c5988c4378bcf4ab407571bda8", "eastus2");
-            // var config = SpeechConfig.FromSubscription("", "");
             var stopRecognition = new TaskCompletionSource<int>();
             var assembly = Assembly.GetAssembly(typeof(SpeechWrapper));
             var audioStream = assembly.GetManifestResourceStream("SpeechSDKCommon.test.wav");
