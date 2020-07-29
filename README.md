@@ -2,7 +2,7 @@
 
 This sample demonstrates what I believe to be a bug, possibily with the way Microsoft.NET.Sdk.Functions 3.0.9 handles the copying of native dependencies. I say possibly because it might also be a problem with the way Azure Functions Host resolves native dependencies.
 
-This sample uses Microsoft.CognitiveServices.Speech to recognize some speech in the embedded test.wav file. For convenience, it includes hardcoded credentials to a Free tier speech service in Azure. If trolls start to hit it, it will be shut down and this readme updated.     
+This sample uses `Microsoft.CognitiveServices.Speech` to recognize some speech in the embedded test.wav file. For convenience, it includes hardcoded credentials to a Free tier speech service in Azure. If trolls start to hit it, it will be shut down and this readme updated.     
 
 The problem can be demonstrated by opening the solution in Visual Studio 2019 (16.6.5). Launch the SpeechSDKFunctionNotWorking in **Release** and **Docker** and then attempt to hit `http://<yourhost:port>/api/TestSpeech`. 
 
