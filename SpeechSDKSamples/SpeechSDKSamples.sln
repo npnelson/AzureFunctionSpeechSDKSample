@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechSDKFunctionApp", "SpeechSDKFunctionApp\SpeechSDKFunctionApp.csproj", "{22C371EC-6270-46AE-B4F3-674125930049}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechSDKCommon", "SpeechSDKCommon\SpeechSDKCommon.csproj", "{3E892319-90A2-4A53-AE4E-24A24CB242E3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechSDKWebApplication", "SpeechSDKWebApplication\SpeechSDKWebApplication.csproj", "{8862A717-86CE-4286-8960-3DCA419C19C5}"
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{22C371EC-6270-46AE-B4F3-674125930049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22C371EC-6270-46AE-B4F3-674125930049}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22C371EC-6270-46AE-B4F3-674125930049}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22C371EC-6270-46AE-B4F3-674125930049}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E892319-90A2-4A53-AE4E-24A24CB242E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E892319-90A2-4A53-AE4E-24A24CB242E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E892319-90A2-4A53-AE4E-24A24CB242E3}.Release|Any CPU.ActiveCfg = Release|Any CPU

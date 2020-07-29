@@ -69,7 +69,6 @@ namespace SpeechSDKCommon
             // Second Chunk, data
             // tag: data.
             reader.Read(data, 0, 4);
-            Trace.Assert((data[0] == 'd') && (data[1] == 'a') && (data[2] == 't') && (data[3] == 'a'), "Wrong data tag in wav");
             // data chunk size
             int dataSize = reader.ReadInt32();
 

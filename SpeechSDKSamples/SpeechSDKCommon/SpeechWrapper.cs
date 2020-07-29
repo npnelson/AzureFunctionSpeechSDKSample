@@ -15,43 +15,28 @@ namespace SpeechSDKCommon
             var stopRecognition = new TaskCompletionSource<int>();
             var assembly = Assembly.GetAssembly(typeof(SpeechWrapper));
             var audioStream = assembly.GetManifestResourceStream("SpeechSDKCommon.test.wav");
-            // Create an audio stream from a wav file.
-            // Replace with your own audio file name.
+
             using (var audioInput = AzureSpeechHelpers.OpenWavFile(new BinaryReader(audioStream)))
             {
                 // Creates a speech recognizer using audio stream input.
                 using (var recognizer = new SpeechRecognizer(config, audioInput))
                 {
-
-
                     recognizer.Recognized += (s, e) =>
                     {
                         if (e.Result.Reason == ResultReason.RecognizedSpeech)
                         {
                             sb.Append(e.Result.Text);
                         }
-                        else if (e.Result.Reason == ResultReason.NoMatch)
-                        {
-                            //  _logger.LogInformation("Speech could not be recognized");
-                        }
                     };
 
                     recognizer.Canceled += (s, e) =>
                     {
-                        //  _logger.LogInformation($"CANCELED: Reason={e.Reason}");
-
-                        if (e.Reason == CancellationReason.Error)
-                        {
-                            //   _logger.LogInformation($"CANCELED:  ErrorCode={e.ErrorCode} ErrorDetails={e.ErrorDetails}");
-
-                        }
 
                         stopRecognition.TrySetResult(0);
                     };
 
                     recognizer.SessionStopped += (s, e) =>
                     {
-                        // _logger.LogInformation("Speech Recognition Session Stopped");
                         stopRecognition.TrySetResult(0);
                     };
 

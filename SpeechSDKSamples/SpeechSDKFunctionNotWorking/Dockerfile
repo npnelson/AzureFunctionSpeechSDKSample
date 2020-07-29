@@ -1,6 +1,6 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/azure-functions/dotnet:3.0 AS base
+FROM mcr.microsoft.com/azure-functions/dotnet:3.0-appservice AS base
 RUN apt-get update
 RUN apt-get -y install build-essential libasound2
 ENV LD_DEBUG=libs
