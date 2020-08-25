@@ -4,6 +4,7 @@ FROM mcr.microsoft.com/azure-functions/dotnet:3.0-appservice AS base
 RUN apt-get update
 RUN apt-get -y install build-essential libasound2
 ENV LD_DEBUG=libs
+ENV LD_LIBRARY_PATH=/home/site/wwwroot/bin
 WORKDIR /home/site/wwwroot
 EXPOSE 80
 

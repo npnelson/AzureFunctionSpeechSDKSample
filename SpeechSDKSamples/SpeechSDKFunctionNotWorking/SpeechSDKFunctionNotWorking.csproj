@@ -21,4 +21,13 @@
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
   </ItemGroup>
+  <Target Name="CopyRequiredNativeAssets" AfterTargets="_FunctionsPostPublish">
+    <ItemGroup>
+
+      <NativeAssetToCopy Include="$(PublishDir)bin\runtimes\linux-x64\native\libMicrosoft.CognitiveServices.Speech.core.so" />
+
+      <NativeAssetToCopy Include="$(PublishDir)bin\runtimes\linux-x64\native\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(NativeAssetToCopy)" DestinationFolder="$(PublishDir)bin" />
+  </Target>
 </Project>

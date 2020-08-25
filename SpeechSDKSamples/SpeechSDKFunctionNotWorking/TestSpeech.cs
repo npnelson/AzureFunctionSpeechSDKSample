@@ -8,16 +8,24 @@ using System.Threading.Tasks;
 
 namespace SpeechSDKFunctionNotWorking
 {
-    public static class Function1
+    public static class TestSpeech
     {
-        [FunctionName("Function1")]
+        [FunctionName("TestSpeech")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
+            try
+            {
+                var speech = await SpeechWrapper.RecognizeSpeechAsync();
+                return new OkObjectResult(speech);
+            }
+            catch (System.Exception ex)
+            {
+                log.LogError(ex, "Exception while attempting to recognize speech");
+                return new OkObjectResult(ex);
+            }
 
-            var speech = await SpeechWrapper.RecognizeSpeechAsync();
-            return new OkObjectResult(speech);
         }
     }
 }
